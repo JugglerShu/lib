@@ -1,0 +1,20 @@
+
+namespace JSLib{
+
+template <typename InputIterator, typename OutputIterator, typename UnaryOperation, typename UnaryPredicate>
+OutputIterator transform_if(InputIterator first, InputIterator last, OutputIterator result, UnaryOperation op, UnaryPredicate pred){
+    for( ; first != last; ++first){
+        if( pred( *first ) ){
+            *result = op(*first);
+            ++result;
+        }
+    }
+    return result;
+}
+
+
+
+
+
+
+} //JSLib
