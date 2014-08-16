@@ -1,3 +1,5 @@
+#ifndef __JSLIB_ALGORITHM__
+#define __JSLIB_ALGORITHM__
 
 namespace JSLib{
 
@@ -18,3 +20,5 @@ OutputIterator transform_if(InputIterator first, InputIterator last, OutputItera
 
 
 } //JSLib
+
+#endif
