@@ -17,6 +17,19 @@ namespace JSLib{
  * the existing entry is removed and new key/value pair is inserted
  * as the most recently used entry.
  * 
+ * Usage:
+ *
+ *     LRUCache<int, std::string> myCache(10);
+ *     myCache.insert(1, "My First String");
+ *     myCache.insert(2, "My Second String");
+ *     myCache.insert(3, "My Third String");
+ *     const std::string* str = myCache.get(2);
+ *     if( NULL == str ){
+ *        // The entry is not in cache
+ *        str = getValueViaSlowMedia(2);
+ *     }
+ *     std::cout << "The value corresponds to 2 is " << *str;
+ *
  **/
 
 template<class KEY, class VALUE>
